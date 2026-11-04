@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Hasret Gümüş — Görsel Tasarımcı & Dijital İçerik Üreticisi</title>
+  <meta name="description"
+    content="Hasret Gümüş Portfolyo — Görsel tasarım, marka kimliği ve dijital iletişim çalışmaları." />
+
+  <!-- Preload Headline & Body Fonts -->
+  <link rel="preload" href="assets/fonts/FuturaNowHeadline-CnXBd.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/SofiaSansExtraCondensed-ExtraBold-latin-ext.woff2" as="font" type="font/woff2"
+    crossorigin />
+  <link rel="preload" href="assets/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Fallback Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sofia+Sans+Extra+Condensed:wght@700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-theme="terracotta">
+
+  <!-- SAĞ ALT: RENK TEMASI DEĞİŞTİRİCİ -->
+  <div class="color-picker" visible="true">
+    <button id="themeToggleBtn" class="button color-picker__toggle" aria-label="Renk Temasını Değiştir"
+      title="Renk Teması">
+      <svg viewBox="0 0 18 18" width="20" height="20" fill="currentColor">
+        <path
+          d="M14.5 9C14.1022 9 13.7206 8.84196 13.4393 8.56066C13.158 8.27936 13 7.89782 13 7.5C13 7.10218 13.158 6.72064 13.4393 6.43934C13.7206 6.15804 14.1022 6 14.5 6C14.8978 6 15.2794 6.15804 15.5607 6.43934C15.842 6.72064 16 7.10218 16 7.5C16 7.89782 15.842 8.27936 15.5607 8.56066C15.2794 8.84196 14.8978 9 14.5 9ZM11.5 5C11.1022 5 10.7206 4.84196 10.4393 4.56066C10.158 4.27936 10 3.89782 10 3.5C10 3.10218 10.158 2.72064 10.4393 2.43934C10.7206 2.15804 11.1022 2 11.5 2C11.8978 2 12.2794 2.15804 12.5607 2.43934C12.842 2.72064 13 3.10218 13 3.5C13 3.89782 12.842 4.27936 12.5607 4.56066C12.2794 4.84196 11.8978 5 11.5 5ZM6.5 5C6.10218 5 5.72064 4.84196 5.43934 4.56066C5.15804 4.27936 5 3.89782 5 3.5C5 3.10218 5.15804 2.72064 5.43934 2.43934C5.72064 2.15804 6.10218 2 6.5 2C6.89782 2 7.27936 2.15804 7.56066 2.43934C7.84196 2.72064 8 3.10218 8 3.5C8 3.89782 7.84196 4.27936 7.56066 4.56066C7.27936 4.84196 6.89782 5 6.5 5ZM3.5 9C3.10218 9 2.72064 8.84196 2.43934 8.56066C2.15804 8.27936 2 7.89782 2 7.5C2 7.10218 2.15804 6.72064 2.43934 6.43934C2.72064 6.15804 3.10218 6 3.5 6C3.89782 6 4.27936 6.15804 4.56066 6.43934C4.84196 6.72064 5 7.10218 5 7.5C5 7.89782 4.84196 8.27936 4.56066 8.56066C4.27936 8.84196 3.89782 9 3.5 9ZM9 0C6.61305 0 4.32387 0.948211 2.63604 2.63604C0.948211 4.32387 0 6.61305 0 9C0 11.3869 0.948211 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18C9.39782 18 9.77936 17.842 10.0607 17.5607C10.342 17.2794 10.5 16.8978 10.5 16.5C10.5 16.11 10.35 15.76 10.11 15.5C9.88 15.23 9.73 14.88 9.73 14.5C9.73 14.1022 9.88804 13.7206 10.1693 13.4393C10.4506 13.158 10.8322 13 11.23 13H13C14.3261 13 15.5979 12.4732 16.5355 11.5355C17.4732 10.5979 18 9.32608 18 8C18 3.58 13.97 0 9 0Z" />
+      </svg>
+    </button>
+  </div>
+
+  <main id="top">
+
+    <!-- 01. HERO -->
+    <div class="hero" id="heroRoot" mounted="true">
+      <div class="hero__mid">
+        <h1 aria-label="Hasret Gümüş">
+          <span class="word" style="--delay:0;">HASRET</span><span aria-hidden="true" class="space"></span><span
+            class="word" style="--delay:1;">GÜMÜS</span>
+        </h1>
+
+        <div class="hero__images" id="heroStickers">
+          <div class="hero__image" data-target="project-form-studios"
+            style="--delay:0;--offsetX:0;--offsetY:0;--velocity:0;" title="FORM STUDIOS">
+            <div class="shadow"></div>
+            <img src="assets/images/smallimages/Form%20Studios_%20S%C4%B1cak%20Minimalizm.png" width="400" height="400"
+              alt="FORM STUDIOS" draggable="false" fetchpriority="high" />
+          </div>
+          <div class="hero__image" data-target="project-morning-club"
+            style="--delay:1;--offsetX:0;--offsetY:0;--velocity:0;" title="Morning Club">
+            <div class="shadow"></div>
+            <img
+              src="assets/images/smallimages/Morning%20Club%20Kafesi%E2%80%99nde%20G%C3%BCne%C5%9Fli%20Bir%20Sabah.png"
+              width="400" height="400" alt="Morning Club" draggable="false" fetchpriority="high" />
+          </div>
+          <div class="hero__image" data-target="project-pace" style="--delay:2;--offsetX:0;--offsetY:0;--velocity:0;"
+            title="PACE Performance">
+            <div class="shadow"></div>
+            <img src="assets/images/smallimages/Neon%20PACE%20Spor%20Ayakkab%C4%B1s%C4%B1%20Reklam%C4%B1.png"
+              width="400" height="400" alt="PACE" draggable="false" fetchpriority="high" />
+          </div>
+          <div class="hero__image" data-target="project-sera" style="--delay:3;--offsetX:0;--offsetY:0;--velocity:0;"
+            title="SÉRA Signature Fragrances">
+            <div class="shadow"></div>
+            <img src="assets/images/smallimages/Zamans%C4%B1z%20S%C3%A9ra%20Parf%C3%BCm%C3%BC.png" width="400"
+              height="400" alt="SÉRA" draggable="false" fetchpriority="high" />
+          </div>
+        </div>
+
+        <h2 aria-label="Görsel Tasarımcı &amp; Dijital İçerik Üreticisi">
+          <span class="word" style="--delay:2;">GÖRSEL</span><span aria-hidden="true" class="space"></span><span
+            class="word" style="--delay:3;">TASARIMCI</span><span aria-hidden="true" class="space"></span><span
+            class="word" style="--delay:4;">&amp;</span><br /><span class="word" style="--delay:5;">DİJİTAL</span><span
+            aria-hidden="true" class="space"></span><span class="word" style="--delay:6;">İÇERİK</span><span
+            aria-hidden="true" class="space"></span><span class="word" style="--delay:7;">ÜRETİCİSİ</span>
+        </h2>
+      </div>
+
+      <div class="hero__top">
+        <small><a href="mailto:hasretkayar0@gmail.com" class="js-copy-email">hasretkayar0@gmail.com</a></small>
+      </div>
+
+      <div class="hero__bot">
+        <p class="hero__clients">ODAK &amp; SEKTÖRLER</p>
+        <small>SAĞLIK, BESLENME, GÜZELLİK &amp; CİLT BAKIMI, NİTELİKLİ KAHVE, MODA, SPOR &amp; HAREKET</small>
+      </div>
+    </div>
+
+    <!-- 02. TAM BOY PORTFOLYO AKIŞI (BIGIMAGES) -->
+    <section class="case-studies-section" id="caseStudies">
+      <div class="container-case-studies">
+        <div class="case-studies-feed" id="caseStudiesFeed">
+
+          <!-- 01. FORM STUDIOS -->
+          <article class="case-study-block scroll-reveal" id="project-form-studios">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/FORM%20STUDIOS_%20Zamans%C4%B1z%20N%C3%B6trler.png"
+                alt="FORM STUDIOS — Zamansız Nötrler" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="case-study-block scroll-reveal">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Bej%20St%C3%BCdyo%20Form%20Koleksiyonu.png"
+                alt="FORM STUDIOS — Bej Stüdyo Form Koleksiyonu" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 02. MORNING CLUB -->
+          <article class="case-study-block scroll-reveal" id="project-morning-club">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Morning%20Club%20marka%20sunum%20kolaj%C4%B1.png"
+                alt="Morning Club — Marka Sunum Kolajı" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 03. PACE PERFORMANCE -->
+          <article class="case-study-block scroll-reveal" id="project-pace">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/PACE_%C2%AE%20Hareket%20ve%20Performans%20Kolaj%C4%B1.png"
+                alt="PACE — Hareket ve Performans Kolajı" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="case-study-block scroll-reveal">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Neon%20Sar%C4%B1%20PACE%20Spor%20Kolaj%C4%B1.png"
+                alt="PACE — Neon Sarı Spor Kolajı" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="case-study-block scroll-reveal">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/PACE_%20Neon%20Performans%20Koleksiyonu.png"
+                alt="PACE — Neon Performans Koleksiyonu" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 04. SÉRA SIGNATURE FRAGRANCES -->
+          <article class="case-study-block scroll-reveal" id="project-sera">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/S%C3%A9ra%20L%C3%BCks%20Parf%C3%BCm%20Koleksiyonu.png"
+                alt="Séra Lüks Parfüm Koleksiyonu" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="case-study-block scroll-reveal">
+            <div class="case-hero-media">
+              <img
+                src="assets/images/bigimages/S%C3%A9ra%E2%80%99n%C4%B1n%20G%C3%BCl%20Tonlar%C4%B1nda%20L%C3%BCks%20Koku%20Kolaj%C4%B1.png"
+                alt="Séra — Gül Tonlarında Lüks Koku Kolajı" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 05. AIRWELL+ HEALTH & CARE CLINIC -->
+          <article class="case-study-block scroll-reveal" id="project-airwell">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Airwell%2B%20Sa%C4%9Fl%C4%B1k%20Klini%C4%9Fi%20Marka%20Panosu.png"
+                alt="Airwell+ Sağlık Kliniği Marka Panosu" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="case-study-block scroll-reveal">
+            <div class="case-hero-media">
+              <img
+                src="assets/images/bigimages/Sa%C4%9Fl%C4%B1kl%C4%B1%20Yar%C4%B1nlar%20%C4%B0%C3%A7in%20Klinik%20Kolaj%C4%B1.png"
+                alt="Airwell+ — Sağlıklı Yarınlar İçin Klinik Kolajı" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 06. NOURA & WELLNESS -->
+          <article class="case-study-block scroll-reveal" id="project-noura">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Noura%20Dengeli%20Beslenme%20Posteri.png"
+                alt="Noura Dengeli Beslenme Posteri" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="case-study-block scroll-reveal">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Beslenme%20ve%20Dengeyle%20Wellness%20Yolculu%C4%9Fu.png"
+                alt="Beslenme ve Dengeyle Wellness Yolculuğu" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- 07. GALLERY POSTER SERIES -->
+          <article class="case-study-block scroll-reveal" id="project-posters">
+            <div class="case-hero-media">
+              <img src="assets/images/bigimages/Modern%20galeride%20sekiz%20poster%20sergisi.png"
+                alt="Modern Galeride Sekiz Poster Sergisi" loading="lazy" />
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 03. ALT İLETİŞİM ALANI (FOOTER) -->
+  <footer class="footer-screen" id="contact">
+    <div class="footer-huge-word" id="footerHugeWord">İLETİȘİM</div>
+
+    <div class="footer-bottom-row scroll-reveal">
+      <a href="mailto:hasretkayar0@gmail.com" class="footer-email-link js-copy-email" title="E-postayı kopyala">
+        hasretkayar0@gmail.com
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toastBox" class="toast-box" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/brands-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

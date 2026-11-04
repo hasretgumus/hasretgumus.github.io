@@ -1,0 +1,640 @@
+/* ==========================================================================
+   HASRET GÜMÜŞ — Portfolyo
+   - Sofia Sans Extra Condensed (Tam Türkçe Destekli Geometrik Başlık Fontu)
+   - Spencer Gabor Grid, Boşluk ve Yay Fiziği (Spring Physics)
+   - Tam Boy Portfolyo Sunum Panoları & Mobil Uyumlu Tasarım
+   ========================================================================== */
+
+@font-face {
+  font-display: swap;
+  font-family: "Futura Now Headline";
+  font-style: normal;
+  font-weight: 400 900;
+  src: local("Futura Now Headline Cn XBd"), local("FuturaNowHeadline-CnXBd"), url(../assets/fonts/FuturaNowHeadline-CnXBd.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Sofia Sans Extra Condensed";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url(../assets/fonts/SofiaSansExtraCondensed-ExtraBold-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Sofia Sans Extra Condensed";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url(../assets/fonts/SofiaSansExtraCondensed-ExtraBold-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Inter Medium"), local("Inter-Medium"), url(../assets/fonts/Inter-Medium.woff2) format("woff2");
+}
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+
+  --font-family-headline: "Futura Now Headline", "Sofia Sans Extra Condensed", sans-serif;
+  --font-family-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline: var(--font-family-headline);
+  --font-body: var(--font-family-body);
+
+  --padding: 1rem;
+  --pad: clamp(1rem, 4vw, 3rem);
+  --gap: 1rem;
+
+  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out-elastic: linear(0, .5737 7.6%, .8382 11.87%, .9463 14.19%, 1.0292 16.54%, 1.0886 18.97%, 1.1258 21.53%, 1.137 22.97%, 1.1424 24.48%, 1.1423 26.1%, 1.1366 27.86%, 1.1165 31.01%, 1.0507 38.62%, 1.0219 42.57%, .9995 46.99%, .9872 51.63%, .9842 58.77%, 1.0011 81.26%, 1);
+
+  --shadow: 0px 9px 21px rgba(0, 0, 0, .1), 0px 38px 38px rgba(0, 0, 0, .09), 0px 85px 51px rgba(0, 0, 0, .05);
+  --shadow-subtle: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 20px 50px rgba(0, 0, 0, 0.14);
+
+  /* Varsayılan Renk Paleti (Sıcak Terakota) */
+  --color-white: #ffffff;
+  --color-black: #2c2c2c;
+  --color-grey: #cbcbcb;
+  --color-primary: #FAF1EA;
+  --color-onPrimary: #2C1810;
+  --color-secondary: #DFC7B8;
+  --color-onSecondary: #2C1810;
+
+  --bg-page: var(--color-primary);
+  --bg-card: #f8f8f8;
+  --bg-muted: var(--color-secondary);
+  --text-main: var(--color-onPrimary);
+  --text-muted: #666872;
+
+  --font-h1: 800 4.125rem/.82 var(--font-family-headline);
+  --font-h2: 800 2.5rem/.82 var(--font-family-headline);
+  --font-h4: 800 .875rem/1 var(--font-family-headline);
+  --font-h6: 500 .5625rem/1 var(--font-family-body);
+  --font-body-spec: 500 1rem/1.3 var(--font-family-body);
+}
+
+@media (width >= 768px) {
+  :root {
+    --font-h1: 800 6.25rem/.82 var(--font-family-headline);
+    --font-h2: 800 4rem/.82 var(--font-family-headline);
+    --font-h4: 800 .875rem/1 var(--font-family-headline);
+    --font-h6: 500 .5625rem/1 var(--font-family-body);
+    --font-body-spec: 500 1rem/1.3 var(--font-family-body);
+  }
+}
+
+/* Palet 2: Beyaz Stüdyo */
+body[data-theme="warm"] {
+  --color-primary: #ffffff;
+  --color-onPrimary: #2c2c2c;
+  --color-secondary: #cbcbcb;
+}
+
+/* Palet 3: Sıcak Krem */
+body[data-theme="clean"] {
+  --color-primary: #F7F5F0;
+  --color-onPrimary: #18191B;
+  --color-secondary: #D2CFC6;
+}
+
+/* Palet 3: Adaçayı Yeşili */
+body[data-theme="mint"] {
+  --color-primary: #EBF3EE;
+  --color-onPrimary: #0E241D;
+  --color-secondary: #BDD1C5;
+}
+
+/* Palet 4: Sıcak Terakota */
+body[data-theme="terracotta"] {
+  --color-primary: #FAF1EA;
+  --color-onPrimary: #2C1810;
+  --color-secondary: #DFC7B8;
+}
+
+/* Palet 5: Koyu Stüdyo */
+body[data-theme="dark"] {
+  --color-primary: #18181A;
+  --color-onPrimary: #F4F5F8;
+  --color-secondary: #3A3B40;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: var(--color-onPrimary);
+  font-family: var(--font-family-headline);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, html {
+  overflow-x: clip;
+  width: 100%;
+}
+
+body, html, main {
+  background-color: var(--color-primary);
+}
+
+body {
+  min-height: 100dvh;
+  color: var(--color-onPrimary);
+  --bg-page: var(--color-primary);
+  --bg-muted: var(--color-secondary);
+  --text-main: var(--color-onPrimary);
+  transition: background-color 0.35s var(--ease-smooth), color 0.35s var(--ease-smooth);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font: var(--font-h1);
+  font-feature-settings: "cpsp" on;
+}
+
+h1, h2 {
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: var(--font-h2);
+  font-feature-settings: "cpsp" on;
+}
+
+h4 {
+  font: var(--font-h4);
+  font-feature-settings: "cpsp" on;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+p {
+  font: var(--font-body-spec);
+}
+
+small {
+  font: var(--font-h6);
+  font-feature-settings: "cpsp" on;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   01. Sağ Alt Renk Teması Butonu
+   -------------------------------------------------------------------------- */
+.button {
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 50rem;
+  color: var(--color-onPrimary);
+  font: 800 1rem/1 var(--font-family-headline);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transition: .8s scale var(--ease-out-elastic), .8s box-shadow var(--ease-out-elastic);
+  width: fit-content;
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    box-shadow: var(--shadow);
+    scale: 1.05;
+  }
+}
+
+.button:active {
+  scale: .95 !important;
+}
+
+.color-picker {
+  bottom: max(var(--safe-bottom), var(--padding));
+  display: grid;
+  place-items: center;
+  position: fixed;
+  right: var(--padding);
+  z-index: 100;
+  touch-action: none;
+  user-select: none;
+}
+
+.color-picker__toggle {
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  padding: 0;
+  pointer-events: auto;
+  position: relative;
+  width: 3rem;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   02. Hero Alanı (Birebir Spencer Gabor Grid & Spacing)
+   -------------------------------------------------------------------------- */
+.hero {
+  container: hero / inline-block;
+  display: grid;
+  grid-template-areas:
+    "top"
+    "mid"
+    "bot";
+  min-height: 100svh;
+  padding: max(var(--safe-top), var(--padding)) max(var(--safe-right), var(--padding)) max(var(--safe-bottom), var(--padding)) max(var(--safe-left), var(--padding));
+  place-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+@media (display-mode: fullscreen) {
+  .hero {
+    min-height: 100vh;
+  }
+}
+
+.hero__top {
+  grid-area: top;
+}
+
+.hero__top small {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.hero__mid {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: min(4rem, 6cqb);
+  grid-area: mid;
+  width: 100%;
+}
+
+.hero__mid h1,
+.hero__mid h2 {
+  font: var(--font-h1);
+  font-size: max(3.6rem, 6.8cqi);
+  max-width: 13em;
+  text-align: center;
+}
+
+.hero__mid h2 {
+  line-height: 0.96;
+}
+
+.hero__mid h1 .word,
+.hero__mid h2 .word {
+  transform-origin: bottom;
+}
+
+.hero__mid h1 .space,
+.hero__mid h2 .space {
+  display: inline-block;
+  width: .3ch;
+}
+
+.hero__mid h2 {
+  color: var(--color-secondary);
+}
+
+.hero__bot,
+.hero__top {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.hero__bot {
+  grid-area: bot;
+  padding: 0 0.5rem;
+}
+
+.hero__clients {
+  font: var(--font-h4);
+  letter-spacing: .09em;
+  max-width: 22em;
+  text-transform: uppercase;
+}
+
+.hero small {
+  color: var(--color-secondary);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.hero__images {
+  display: flex;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  position: relative;
+  touch-action: pan-y;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero__images .hero__image {
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  display: grid;
+  width: clamp(6rem, 100%, 14cqi);
+}
+
+.hero__images .hero__image .shadow {
+  box-shadow: var(--shadow);
+}
+
+.hero__images .hero__image .shadow,
+.hero__images .hero__image img {
+  border-radius: inherit;
+  grid-area: 1 / 1;
+  translate: calc(var(--offsetX) * 1px) calc(var(--offsetY) * 1px + var(--translateY));
+}
+
+.hero__images .hero__image img {
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.hero__images .hero__image:first-child * {
+  rotate: calc(2deg - var(--velocity) * .25deg);
+  --translateY: 5%;
+}
+
+.hero__images .hero__image:nth-child(2) * {
+  rotate: calc(-3deg - var(--velocity) * .25deg);
+  --translateY: -6%;
+}
+
+.hero__images .hero__image:nth-child(3) * {
+  rotate: calc(6deg - var(--velocity) * .25deg);
+  --translateY: 5%;
+}
+
+.hero__images .hero__image:nth-child(4) * {
+  rotate: calc(-2deg - var(--velocity) * .25deg);
+  --translateY: -4%;
+}
+
+.hero__images .hero__image:not(:last-child) {
+  margin-right: -6%;
+}
+
+/* --------------------------------------------------------------------------
+   03. Tam Boy Portfolyo Akışı (BigImages)
+   -------------------------------------------------------------------------- */
+.case-studies-section {
+  padding: 2rem var(--pad) 8rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.container-case-studies {
+  width: 100%;
+}
+
+.case-studies-feed {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+}
+
+.case-study-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-hero-media {
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+  background-color: var(--bg-card);
+}
+
+.case-hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   04. Alt İletişim Alanı (Footer)
+   -------------------------------------------------------------------------- */
+.footer-screen {
+  min-height: 100dvh;
+  background-color: var(--color-onPrimary);
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--pad);
+  overflow: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.footer-huge-word {
+  font-family: var(--font-headline);
+  font-size: clamp(4.2rem, 23vw, 22rem);
+  font-weight: 800;
+  line-height: 0.78;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  transform-origin: bottom;
+  margin-left: -0.02em;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 2rem;
+}
+
+.footer-email-link {
+  font-family: var(--font-headline);
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footer-email-link:hover {
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   05. Kaydırma Animasyonu (Scroll Reveal)
+   -------------------------------------------------------------------------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   06. Bildirim Kutusu (Toast)
+   -------------------------------------------------------------------------- */
+.toast-box {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--color-onPrimary);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-subtle);
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.toast-box.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   07. Mobil ve Tablet Uyumluluğu (Responsive)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: max(var(--safe-top), 1.25rem) 0.75rem max(var(--safe-bottom), 1.25rem);
+  }
+
+  .hero__mid {
+    gap: clamp(1.75rem, 4.5svh, 2.75rem);
+  }
+
+  .hero__mid h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .hero__mid h2 {
+    font-size: clamp(2.15rem, 9.2vw, 3.6rem);
+    max-width: 96vw;
+  }
+
+  .hero__images {
+    padding: 0.5rem 0;
+  }
+
+  .hero__images .hero__image {
+    width: clamp(4.8rem, 23vw, 7.5rem);
+    border-radius: 0.75rem;
+  }
+
+  .hero__images .hero__image:not(:last-child) {
+    margin-right: -5%;
+  }
+
+  .case-studies-section {
+    padding: 1rem 0.75rem 4rem;
+  }
+
+  .case-studies-feed {
+    gap: 1.5rem;
+  }
+
+  .case-hero-media {
+    border-radius: 0.85rem;
+  }
+
+  .footer-screen {
+    min-height: 65dvh;
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .footer-huge-word {
+    font-size: clamp(3.6rem, 22vw, 9rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-bottom-row {
+    padding-top: 1.25rem;
+  }
+
+  .color-picker__toggle {
+    width: 2.65rem;
+    height: 2.65rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__mid h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero__mid h2 {
+    font-size: 1.95rem;
+  }
+
+  .hero__images .hero__image {
+    width: 22.5vw;
+    border-radius: 0.65rem;
+  }
+}
